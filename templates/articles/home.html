@@ -1,0 +1,42 @@
+{% extends "articles/base.html" %}
+{% load article_tags %}
+
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+
+{% block title %}{{ page.title }}{% endblock %}
+{% block content %}
+<div class='banner articles-font'>
+  <div class='content-container'>
+    <h1>Hopeful, Helpful, and Friendly Articles</h1>
+  </div>
+</div>
+<div class='main row articles-font'>
+  <div class='content-container columns medium-8'>
+    {% get_articles as articles %}
+    {% for article in articles %}
+      <div class="">
+        <a href="/articles/{{ article.slug }}">
+          <h2>{{ article.title }}</h2>
+          <h6>
+            {{ article.date }} by {{ article.author }}
+          </h6>
+        </a>
+        <!-- Preview of the first 300 characters -->
+        {{ article.body|truncatechars_html:300 }}
+      </div>
+    {% endfor %}
+  </div>
+  <div class='content-container columns medium-4'>
+    <h4>Recent Articles</h4>
+    {% get_articles as articles %}
+    {% for article in articles %}
+      <hr>
+      <a href="/articles/{{ article.slug }}">
+        <h5>{{ article.title }}</h5>
+        <h6>{{ article.date }}</h6>
+      </a>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

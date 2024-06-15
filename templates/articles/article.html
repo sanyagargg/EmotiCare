@@ -1,0 +1,94 @@
+{% extends "articles/base.html" %}
+{% load article_tags %}
+
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+{% load wagtailuserbar %}
+
+{% block title %}{{ page.title }}{% endblock %}
+
+{% block content %}
+{% if user.is_staff %}
+{% wagtailuserbar %}
+{% endif %}
+
+<div class='banner articles-font article-page'>
+  <div class='content-container'>
+    <h1>{{ page.title }}</h1>
+    <h4>{{ page.date }} by {{page.author }}</h4>
+  </div>
+</div>
+<div class='main row articles-font'>
+  <div class='content-container article columns'>
+    {{ page.body }}
+  </div>
+  <div class='content-container columns medium-4'>
+    <h4>Recent Articles</h4>
+    {% get_articles as articles %}
+    {% for article in articles %}
+      <hr>
+      <a href="/articles/{{ article.slug }}">
+        <h5>{{ article.title }}</h5>
+        <h6>{{ article.date }}</h6>
+      </a>
+    {% endfor %}
+  </div>
+</div>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b1b115c81cb12f7"></script>
+
+<script>
+  var image_url = $(".block-full_width_image").first().find("img").first().attr("src")
+  var el = document.createElement('script');
+  el.type = 'application/ld+json';
+  el.text = JSON.stringify({
+   "@context": "http://schema.org",
+   "@type": "Article",
+   "headline": "{{ page.title }}",
+   "image": "https://howtokillyourself.org" + image_url,
+   "url": "https://howtokillyourself.org/articles/{{ page.slug }}/",
+   "datePublished": "{{ page.date|date:'Y-m-d' }}",
+   "dateModified": "{{ page.date|date:'Y-m-d' }}",
+   "author": {
+     "@type": "Person",
+     "name": "{{ page.author }}"
+   },
+   "publisher": {
+     "@type": "Organization",
+     "name": "Searching4Hope",
+     "logo": {
+       "@type": "ImageObject",
+       "url": "http://www.searching4hope.com/wp-content/uploads/2017/06/s4h.png"
+     }
+   },
+   "keywords": "{% for category in page.tags.all %}{{ category|lower }}{% if not forloop.last %},{% endif %}{% endfor %}",
+   "mainEntityOfPage": {
+     "@type": "WebPage",
+     "@id": "https://howtokillyourself.org/articles/{{ page.slug }}/"
+   }
+  });
+  document.querySelector('body').appendChild(el);
+</script>
+
+{% comment %}
+<div style='text-align: left;'>
+  <div class="row">
+    <div class="medium-offset-2 medium-8 columns">
+      <h1>{{ page.title }}</h1>
+      <p>{{ page.date }} - By: {{ page.author }}</p>
+      {{ page.body }}
+    </div>
+    <div class="medium-2 columns">
+      <h3>Articles</h3>
+
+      <ul>
+      {% get_articles as articles %}
+      {% for article in articles %}
+        <li><a href="{{ article.url }}">{{ article.title }}</a></li>
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+{% endcomment %}
+{% endblock %}

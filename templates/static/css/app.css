@@ -1,0 +1,459 @@
+html {
+  font-weight: normal;
+  line-height: 1.5;
+
+  @media only screen and (min-width: 0) {
+    font-size: 14px;
+  }
+
+  @media only screen and (min-width: 1025px) {
+    font-size: 16px;
+  }
+}
+
+body {
+  color: #fff;
+  text-align: center;
+}
+
+body,
+.nav {
+  background-color: #24262a;
+  font-family: 'Open Sans', arial, sans-serif;
+}
+
+.copyright-row {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.5rem;
+}
+
+.articles-font,
+.blog .copyright-row {
+  color: #333;
+}
+
+p > a {
+    color: #2ba6cb !important;
+}
+
+.relative {
+  position: relative;
+}
+
+.content-container {
+  margin: 0 auto;
+  max-width: 70rem;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+}
+
+.cover {
+  background-color: rgba(36, 38, 42, 0.3);
+}
+
+.cover,
+.img-container {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.btn-group .btn {
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-group .btn:hover .cover {
+  background-color: rgba(36, 38, 42, 0.1);
+}
+
+.img-container {
+  filter: blur(5px);
+}
+
+#depression .img-container {
+  background: url("/static/images/rain-window.jpg") no-repeat center;
+  background-size: cover;
+}
+
+#finances .img-container {
+  background: url("/static/images/child.jpg") no-repeat center;
+  background-size: cover;
+}
+
+#relationships .img-container {
+  background: url("/static/images/woman-window.jpg") no-repeat center;
+  background-size: cover;
+}
+
+#loneliness .img-container {
+  background: url("/static/images/beach.jpg") no-repeat center;
+  background-size: cover;
+}
+
+#bullying .img-container {
+  background: url("/static/images/feet-forward.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.nav .content-container {
+  text-align: left;
+}
+
+.nav ul {
+  background-color: #24262a;
+}
+
+.nav li {
+  float: left;
+}
+
+.nav a,
+.nav a:hover,
+.nav a:focus {
+  color: #fff;
+  display: block;
+  padding: 1rem;
+}
+
+.nav li a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+}
+
+.center {
+  text-align: center;
+}
+
+.banner {
+  background-color: #353c4b;
+  padding: 3rem 1rem;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#353c4b+0,24262a+100 */
+  background: #353c4b; /* Old browsers */
+  background: -moz-linear-gradient(top,  #353c4b 0%, #24262a 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #353c4b 0%,#24262a 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #353c4b 0%,#24262a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#353c4b', endColorstr='#24262a',GradientType=0 ); /* IE6-9 */
+}
+
+.articles-font.banner {
+  background: #353c4b;
+  color: #fff;
+}
+
+.banner.window-img {
+  background: url("/static/images/woman-window.jpg") no-repeat center;
+  background-size: cover;
+  position: relative;
+}
+
+.banner.window-img h2,
+.banner.window-img h1,
+.banner.banner-image h1 {
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.banner h2,
+.banner h1,
+.struggle h2,
+.content-container h3,
+button h5 {
+  font-family: 'Gloria Hallelujah', sans-serif;
+}
+
+.banner h1.salsa,
+.content-container h3.salsa,
+.articles-font h1,
+.articles-font .banner h1,
+.articles-font h2,
+.articles-font .banner h2,
+.articles-font h3,
+.articles-font h4,
+.articles-font h5,
+.articles-font h6 {
+  font-family: 'Salsa', serif;
+}
+
+.banner:not(.articles-font) h2:not(.main-page),
+.banner:not(.articles-font) h1.main-page {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.banner:not(.articles-font) h1:not(.main-page),
+.banner:not(.articles-font) h2.main-page {
+  font-size: 2.5rem;
+}
+
+.main { text-align: center; }
+
+.main .content-container {
+  background-color: #353c4b;
+  border-radius: 1rem;
+  display: inline-block;
+  margin: 0 0.5rem;
+  padding: 1.5rem;
+  text-align: left;
+  width: calc(100% - 1rem);
+  word-wrap: break-word;
+}
+
+.main .content-container,
+.main.tab-main:nth-child(even),
+.main.tab-main.tab-main-light {
+  background-color: #353c4b;
+}
+
+.tab-main hr {
+  opacity: 0.4;
+}
+
+.articles-font.main .content-container {
+  background-color: #fff;
+}
+
+.main:not(.articles-font) .content-container img {
+  margin: 1rem 0;
+  max-width: 15rem;
+  max-height: 4rem;
+}
+
+.main .content-container.article {
+  padding-top: 0.5rem;
+}
+
+.main .content-container .tab img {
+  border-radius: 4px;
+  float: right;
+  margin: 0.5rem 0 0.5rem 1rem;
+  max-width: 25rem;
+  max-height: 15rem;
+}
+
+.main.tab-main {
+  margin: 0;
+  padding: 0;
+}
+
+.main.tab-main .content-container {
+  border-radius: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.main.tab-main:nth-child(odd) .content-container {
+  background-color: transparent;
+}
+
+.footer {
+  padding: 1rem;
+}
+
+.footer,
+.footer a,
+.footer a:focus,
+.content-container a,
+.content-container a:focus {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.articles-font .content-container a,
+.articles-font .content-container a:focus {
+  color: #222;
+}
+
+.content-container a:hover,
+.footer a:hover {
+  color: #fff;
+}
+
+.footer h6 {
+  font-weight: bold;
+  margin: 0.75rem 0 0.4rem;
+}
+
+.btn,
+.btn:focus {
+  background-color: #556fa4;
+  border-radius: 4px;
+  color: #fff;
+  display: inline-block;
+  /*margin-top: 0.5rem;*/
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+}
+
+.btn:hover {
+  background-color: #6f8ac0;
+  color: #fff;
+}
+
+.btn-group {
+  margin-bottom: 2rem;
+}
+
+.btn-group .btn {
+  padding: 1rem 2rem 0.5rem;
+}
+
+.hidden { display: none; }
+
+.hope-line-iframe {
+  border: 0;
+}
+
+.resources .columns img {
+  max-width: 100%;
+}
+
+.articles-list {
+  border: 2px solid gray;
+  width: 150px;
+  height: 150px;
+}
+
+.banner.banner-image {
+  background: url("/static/images/pattern-background.jpg") no-repeat center;
+  background-size: cover;
+  margin-bottom: 3rem;
+}
+
+.banner.banner-image.no-bottom-margin {
+  margin-bottom: 0;
+}
+
+@media (min-width: 641px) {
+  .hide-for-medium,
+  .nav a.hide-for-medium {
+    display: none;
+  }
+
+  .footer .content-container {
+    text-align: left;
+  }
+
+  .banner:not(.articles-font) h2:not(.main-page),
+  .banner:not(.articles-font) h1.main-page {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .banner:not(.articles-font) h1:not(.main-page),
+  .banner:not(.articles-font) h2.main-page {
+    font-size: 4rem;
+  }
+
+  .footer .locations li {
+    float: left;
+    width: 50%;
+  }
+
+  .btn-group .btn {
+    margin: 0.25rem 0.5rem;
+  }
+
+  .hope-line-iframe {
+    height: 580px;
+    min-width: 450px;
+    width: 40%;
+  }
+
+  .main.articles-font .content-container:first-child {
+    width: 63%;
+  }
+
+  .main.articles-font .content-container:not(:first-child) {
+    width: 30%;
+  }
+
+  .main .content-container.chat-width {
+    max-width: 50%;
+    min-width: 500px;
+  }
+}
+
+@media (max-width: 640px) {
+  .main .content-container {
+    padding: 1rem;
+  }
+
+  .main:not(.articles-font) .content-container .tab img {
+    display: block;
+    float: none;
+    margin: 1rem auto;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hide-for-small-only {
+    display: none;
+  }
+
+  .nav li { float: none; }
+  .nav a { width: 100%; }
+
+  .btn-group .btn {
+    border-radius: 0;
+    margin: 0 0 0.1rem;
+    width: 100%;
+  }
+
+  .hope-line-iframe {
+    height: 580px;
+    width: 100%;
+  }
+
+  .resources .row:not(:first-child) {
+    margin-top: 1rem;
+  }
+}
+
+/*******************************************
+*      BLOG STYLES
+********************************************/
+
+body.blog {
+  background-color: #fff;
+}
+
+.blog .main {
+  margin-top: 2rem;
+}
+
+.blog .main .content-container {
+  border: 1px solid #cacaca;
+}
+
+.blog .footer,
+.blog .copyright-row {
+  background-color: #eeeef6;
+}
+
+.blog .footer {
+  margin-top: 4rem;
+}
+
+.blog .footer,
+.blog .footer a {
+  color: #333;
+}
+
+.blog .content-container a:hover,
+.blog .footer a:hover {
+  color: #59d;
+}
+
+@media (max-width: 640px) {
+  .blog .main .content-container:not(:first-child) {
+    margin-top: 2rem;
+  }
+}

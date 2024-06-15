@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Salsa|Open+Sans" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msvalidate.01" content="0FD955DA134C4CB8DAE73920B85B443D" />
+    {% block meta %}
+    <meta name="description" content="Are you asking how to kill yourself? We want you to know you are not alone – many others have asked that question. We’d like to help you make another choice.">
+    {% endblock %}
+    <title>{% block title %}Searching How to kill yourself? You're not alone.{% endblock %}</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href={% static "css/foundation.min.css" %}>
+    <link rel="stylesheet" type="text/css" href={% static "css/font-awesome.min.css" %}>
+    <link rel="stylesheet" type="text/css" href={% static "css/app.css" %}>
+    <script src={% static "js/vendor/jquery.js" %}></script>
+    <script defer src={% static "js/vendor/foundation.min.js" %}></script>
+    <script defer src={% static "js/vendor/what-input.js" %}></script>
+    <script defer src={% static "js/app.js" %}></script>
+  </head>
+  <body class="{% block bodyclass %}{% endblock %}">
+    <div class='nav'>
+      <div class='content-container'>
+        <a tabindex='0' onclick='navClick()' class='hide-for-medium'>
+          <i class='fa fa-bars'></i>
+        </a>
+        <ul class='hide-for-small-only'>
+          <li><a href='/'>Home</a></li>
+          <li><a href='/resources/'>Resources</a></li>
+          <li><a href='https://www.thehopeline.com/gethelp'>Chat</a></li>
+          <li><a href='/why_we_are_here/'>Why We're Here</a></li>
+          <li><a href='/articles/'>Articles</a></li>
+        </ul>
+      </div>
+    </div>
+    {% block content %}
+    {% endblock %}
+    <div class='footer'>
+      <div class='content-container'>
+        <div class='row'>
+          <div class='columns small-12 medium-8'>
+            <h6>Resources By Location</h6>
+          {% if geo.country_code == "US" %}
+            <a href='tel:+91 9802738255' class='btn phone-btn'>
+              <i class='fa fa-phone hide-for-medium'></i>
+              <span class='name'>India National Suicide Hotline</span>
+              <span class='hide-for-small-only'>
+                <br>
+                <i class='fa fa-phone'></i>
+                <span class='number'>Call: +91 9817058564</span>
+              </span>
+            </a>
+          {% else %}
+            <a href='tel:+91 9334564566' class='hide-for-small-only btn phone-btn'>
+              <i class='fa fa-phone hide-for-medium'></i>
+              <span class='name'>India's Suicide Hotline</span>
+              <span class='hide-for-small-only'>
+                <br>
+                <i class='fa fa-phone'></i>
+                <span class='number'></span>
+              </span>
+              <span class='name'>+91 9854732450</span>
+            </a>
+            <a href='tel:+91 9334564566' class='hide-for-medium btn phone-btn'>
+              <span class='name'>India's Suicide Hotline</span>
+              <i class='fa fa-phone'></i>
+              <span class='name'>+91 9854732450</span>
+            </a>
+            <ul class='locations'>
+              <li>
+                <a href='/city/hyderabad'>Hyderabad</a>
+              </li>
+              <li>
+                <a href='/city/delhi'>New Delhi</a>
+              </li>
+              <li>
+                <a href='/city/mumbai'>Mumbai</a>
+              </li>
+              <li>
+                <a href='/city/bangalore'>bangalore</a>
+              </li>
+              <li>
+                <a href='/city/kolkata'>Kolkata</a>
+              </li>
+              <li>
+                <a href='/city/pune'>Pune</a>
+              </li>
+              <li>
+                <a href='/city/lucknow'>Lucknow</a>
+              </li>
+              <li>
+                <a href='/city/chennai'>Chennai</a>
+              </li>
+            </ul>
+          {% endif %}
+          </div>
+          <div class='columns small-12 medium-4'>
+            <h6>About Us</h6>
+            <ul>
+              <li>
+                <a href='/why_we_are_here/'>Why We're Here</a>
+              </li>
+              <li>
+                <a href='/articles/'>Articles</a>
+              </li>
+            </ul>
+            <br>
+            <br>
+            <script>
+              (function() {
+                var cx = '006371321219183947987:2dwfhgemd-m';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+              })();
+            </script>
+            <gcse:search></gcse:search>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--
+    <div class='copyright-row'>
+      <div class='content-container'>
+        <div class='row'>
+          © Searching4Hope
+        </div>
+      </div>
+    </div>
+    -->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'IN-38994707-3', 'auto');
+    ga('send', 'pageview');
+    </script>
+  </body>
+</html>
