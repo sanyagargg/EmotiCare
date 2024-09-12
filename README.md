@@ -1,4 +1,4 @@
-# <div align="center">Mental Health Awareness Organization Website</div>
+# <div align="center">EmotiCare</div>
 
 [View the live project here.](https://emoticare.onrender.com)
 
